@@ -32,10 +32,12 @@
 nav {
   position: fixed;
   width: 100%;
+  height: 15vh;
   padding: 20px 0;
   z-index: 800;
   transition: all 0.3s ease;
   font-family: 'Ubuntu', sans-serif;
+  background-color: white;
 }
 
 nav.sticky {
@@ -54,11 +56,11 @@ nav .navbar {
 nav .navbar .logo a {
   font-weight: 500;
   font-size: 35px;
-  color: #ff9999;
+  color: #DB7A7A;
 }
 
 nav.sticky .navbar .logo a {
-  color: #fff;
+  color: white;
 }
 
 nav .navbar .menu {
@@ -74,7 +76,7 @@ nav .navbar .menu li {
 .navbar .menu a {
   font-size: 18px;
   font-weight: 500;
-  color: #0E2431;
+  color: black;
   padding: 6px 0;
   transition: all 0.4s ease;
 }
@@ -115,7 +117,7 @@ nav.sticky .menu a:hover {
 }
 
 .navbar .media-icons a {
-  color: #DB7A7A;
+  color: black;
   font-size: 18px;
   margin: 0 6px;
 }
@@ -126,7 +128,7 @@ nav.sticky .media-icons a {
 }
 
 .navbar .media-icons a:hover {
-  color: black;
+  color: #DB7A7A;
 }
 
 /* Side Navigation Menu Button CSS */
@@ -156,73 +158,72 @@ nav.sticky .menu-btn {
 
 /* home section styling */
 
-.home {
-  height: 100vh;
+.img {
+  background: url('Images/img.jpg') no-repeat;
   width: 100%;
-  background-size: auto;
+  height: 100vh;
+  background-size: cover;
   background-position: center;
-  background-attachment: fixed;
-  font-family: 'Ubuntu', sans-serif;
+  position: relative;
 }
 
-.home .center img {
-  height: 400px;
-  width: 1500px;
-  object-fit: center;
-  border-radius: 12px;
-}
-
-.home .home-content {
-  width: 150%;
+.img::before {
+  content: '';
+  position: absolute;
   height: 100%;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
 }
 
-
-.home .button {
-  margin: 14px 0;
+.center {
+  position: absolute;
+  top: 93%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 0 20px;
+  text-align: center;
 }
 
-.home .left-button button {
-  outline: none;
-  padding: 8px 16px;
-  border-radius: 6px;
-  font-size: 25px;
-  font-weight: 400;
-  background: #DB7A7A;
-  color: #fff;
+.center .btns {
+  margin-top: 20px;
+}
+
+.center .btns button {
+  height: 70px;
+  width: 500px;
+  border-radius: 5px;
+  border: none;
+  margin: 0 10px;
+  border: 2px solid white;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0 10px;
   cursor: pointer;
-  border: 2px solid transparent;
-  transition: all 0.4s ease;
+  outline: none;
+  transition: all 0.3s ease;
 }
 
-.home .left-button button:hover {
-  border-color: #DB7A7A;
-  background-color: #fff;
+.center .btns button:first-child {
+  background: #DB7A7A;
+  color: white;
+}
+
+.btns button:first-child:hover {
+  background: white;
   color: #DB7A7A;
 }
 
-.home .right-button button {
-  outline: none;
-  padding: 8px 16px;
-  border-radius: 6px;
-  font-size: 25px;
-  font-weight: 400;
+.center .btns button:last-child {
   background: #DB7A7A;
-  color: #fff;
-  cursor: pointer;
-  border: 2px solid transparent;
-  transition: all 0.4s ease;
+  color: white;
 }
 
-.home .right-button button:hover {
-  border-color: #DB7A7A;
-  background-color: #fff;
+.btns button:last-child:hover {
+  background: white;
   color: #DB7A7A;
 }
+
 
 /* About Section Styling */
 /* Those Elements Where We Have Apply Same CSS,
@@ -325,7 +326,7 @@ section .button button:hover {
   color: #DB7A7A;
 }
 
-/* My Skills CSS */
+/* My Education CSS */
 .education {
   background: #F0F8FF;
 }
@@ -390,7 +391,7 @@ section .button button:hover {
   color: #DB7A7A;
 }
 
-/* Contact Me CSS */
+/* Contact CSS */
 .contact {
   background: #F0F8FF;
 }
